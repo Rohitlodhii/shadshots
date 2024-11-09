@@ -25,6 +25,8 @@ import { Loader2 } from 'lucide-react'
 
 
 
+
+
 //Zod Schema for the Form component, Optional : (You can put it in your Schema's folder and import from there) 
 
 const LoginFormSchema = z.object({
@@ -66,9 +68,9 @@ const LoginPage = () => {
 
 
     return (
-        <section className='h-screen w-full flex items-center justify-center bg-neutral-800'>
+        <section className='h-screen w-full flex items-center justify-center bg-neutral-800 dark:bg-neutral-900'>
             <div className=' bg-white w-full md:w-[80%]  md:mx-16 h-full md:h-[90%] lg:rounded-2xl shadow-md flex overflow-hidden'>
-                <div className='flex items-center justify-center h-full  flex-1 bg-neutral-800 lg:bg-slate-100  '>
+                <div className='flex items-center justify-center h-full  flex-1 bg-neutral-800 lg:bg-slate-200 lg:dark:bg-slate-800  '>
 
                     {/* Login Page Form by Shadcn , you can copy code inside it and can serve it as component too */}
 
@@ -118,7 +120,7 @@ const LoginPage = () => {
 
                                         <div className='flex gap-1 items-center'>
                                             <Checkbox id='showpass' checked={checked} onCheckedChange={(state) => setChecked(state === true)} />
-                                            <Label htmlFor='showpass' className='text-zinc-700 text-sm' >Show Password</Label>
+                                            <Label htmlFor='showpass' className='text-zinc-700 dark:text-zinc-400  text-sm' >Show Password</Label>
                                         </div>
 
                                         <div className='text-sm text-zinc-400 cursor-pointer hover:underline' >Forgot password?</div>
@@ -143,8 +145,8 @@ const LoginPage = () => {
                             </Form>
 
 
-                            <div className='text-sm text-zinc-600 mt-6 text-center w-full'>
-                                Don't have an account? <span className='text-black cursor-pointer hover:underline'>Signup</span>
+                            <div className='text-sm text-zinc-700 dark:text-zinc-400 mt-6 text-center w-full'>
+                                Don't have an account? <span className='text-black dark:text-white cursor-pointer hover:underline'>Signup</span>
                             </div>
 
                         </CardContent>
@@ -173,8 +175,8 @@ const LoginPage = () => {
                 {/* Cover Image Here , only visible on the Large Screens , Change the cover image path on the object above */}
 
                 <div
-                    className="hidden md:hidden lg:flex items-center justify-center h-full flex-1 bg-cover bg-center"
-                    style={{ backgroundImage: "url('https://img.freepik.com/free-vector/flat-design-frailejon-plant-illustration_23-2150041935.jpg?t=st=1731138651~exp=1731142251~hmac=af72164671c4777fc0a506020f26e907be40b15ba230d21e1eee5a254966ca05&w=740')" }}
+                    className="hidden bg-slate-500 md:hidden lg:flex items-center justify-center h-full flex-1 bg-cover bg-center"
+                    style={{ backgroundImage: "url('https://res.cloudinary.com/dqw0oojcx/image/upload/v1731170343/flat-design-frailejon-plant-illustration_23-2150041935_kiy50q.png')" }}
                 >
 
                 </div>
