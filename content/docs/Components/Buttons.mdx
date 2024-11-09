@@ -1,0 +1,50 @@
+---
+title: Buttons
+description: Buttons with some micro-interactions built with tailwindcss (Copy Paste)
+---
+
+import ComponentPreviewer from '../../../components/componentsPreviewer'
+import BtnWithArrow from '../../../components/preview/button'
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import CodeBlock from '../../../components/CodeBlock'
+import {btnData} from '../../../data/button/button'
+
+## {btnData.primaryBtn.name}
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value="Preview">
+
+      <ComponentPreviewer component={BtnWithArrow} />
+  
+  </Tab>
+  <Tab value="Code">
+
+  <CodeBlock code={btnData.primaryBtn.code} language='javascript' />
+
+  
+  </Tab>
+</Tabs>
+
+
+### Installation
+
+<Steps>
+    <Step>
+ 
+Copy-Paste the code above to your working file
+ 
+</Step>
+ 
+<Step>
+ 
+Add onSubmit attribute on the div to make it clickable
+ 
+  </Step>
+</Steps>
+
+<Callout>Tailwind Css should be pre-installed in your project to use it!</Callout>
+
+
+
+

@@ -1,3 +1,6 @@
+//@ts-ignore
+//Todo Fix Later
+
 import { source } from '@/lib/source';
 import {
   DocsPage,
@@ -7,6 +10,7 @@ import {
 } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
+import CodeBlock from '@/components/CodeBlock';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -18,7 +22,9 @@ export default async function Page(props: {
   const MDX = page.data.body;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage   tableOfContent={{
+      style : "clerk", // your banner
+    }} toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
@@ -44,3 +50,5 @@ export async function generateMetadata(props: {
     description: page.data.description,
   };
 }
+
+
