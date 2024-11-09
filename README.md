@@ -1,4 +1,4 @@
-#Shadshots
+# Shadshots
 Accessible and customizable components that you can copy and paste into your apps.
 Includes Shadcn extensions : more shadcn components
 Includes Tailblocks : Ui components made on pure tailwindcss
