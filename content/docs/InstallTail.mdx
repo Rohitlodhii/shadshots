@@ -2,3 +2,113 @@
 title: Installation (TailBlocks Ext)
 description: How to use shadshots, what are TailBlocks , ShadCn extensions , templates.
 ---
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+### Introduction
+
+Tailblocks are the premade ui components made in tailwindcss which you can simply copy and paste to your
+website and use them.
+
+You will get Tailblocks as React Components in the tailblocks tab, but if you want to use them on your vanillaJS project
+just copy them and ask ChatGPT to convert them
+
+<Callout>TailwindCss must be installed in your React/Next project to use Tailblocks</Callout>
+
+Below given how can you install tailwindcss in your react / next app
+
+
+## Tailwindcss Installation
+
+<Steps>
+
+    <Step>
+       ### Create your project 
+
+        ```command
+            npx create-react-app my-project
+            cd my-project
+        ```
+
+    </Step>
+    <Step>
+
+       ### Install Tailwind CSS
+
+        Install tailwindcss via npm, and then run the init command to generate your tailwind.config.js file.
+
+
+        ```command
+        npm install -D tailwindcss
+        npx tailwindcss init
+        ```
+    </Step>
+    <Step>
+       ### Configure your template paths
+
+        Add the paths to all of your template files in your tailwind.config.js file.
+
+        <Tabs items={["tailwind.config.js"]}>
+ 
+        <Tab value="tailwind.config.js">
+         ```js
+/** @type {import('tailwindcss').Config} */
+    module.exports = {
+            content: [ // [!code highlight]
+                "./src/**/*.{js,jsx,ts,tsx}", // [!code highlight]
+            ], // [!code highlight]
+            theme: {
+                extend: {},
+            },
+            plugins: [],
+    }
+
+        ```
+</Tab>
+ </Tabs>
+
+
+    </Step>
+
+    <Step>
+       ### Add the Tailwind directives to your CSS
+
+        Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+          <Tabs items={["index.css"]}>
+ 
+        <Tab value="index.css">
+         ```js
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+        ```
+</Tab>
+ </Tabs>
+
+    </Step>
+      <Step>
+     ###  Start using Tailwind in your project
+        
+        Start using Tailwind’s utility classes to style your content.
+        App.js
+
+
+          <Tabs items={["App.js"]}>
+ 
+        <Tab value="App.js">
+         ```js
+    export default function App() {
+            return (
+                    <h1 className="text-3xl font-bold underline">
+                    Hello world!  
+                    </h1> 
+            )
+    }
+        ```
+</Tab>
+ </Tabs>
+
+    </Step>
+
+</Steps>
